@@ -1,108 +1,97 @@
-import React, { Component } from 'react'
-import { Container } from 'reactstrap'
-export default class extends Component {
-  componentDidMount() {
+import { Carousel } from 'react-carousel-minimal';
+import React from 'react';
+
+function Carousel1() {
+ const data = [
+    {
+      image: "carousel-images/IMG_20230111_201054.jpg",
    
-  }
+    },
+    {
+      image: "carousel-images/IMG_20230111_201112.jpg",
+  
+    },
+    {
+      image: "carousel-images/IMG_20230111_201130.jpg",
+      
+    },
+    {
+      image: "carousel-images/IMG_20230111_201154.jpg",
+      
+    },
+    {
+      image: "carousel-images/IMG_20230111_201211.jpg",
+  
+    },
+    {
+      image: "carousel-images/IMG_20230111_201315.jpg",
+      
+    },
+    {
+      image: "carousel-images/IMG_20230111_201334.jpg",
+  
+    },
+    {
+      image: "carousel-images/IMG_20230111_201349.jpg",
+      
+    },
+    {
+      image: "carousel-images/IMG_20230111_201404.jpg",
+      
+    },
+    {
+      image: "carousel-images/IMG_20230111_201421.jpg",
+      
+    },
+    {
+      image: "carousel-images/IMG_20230111_201437.jpg",
+      
+    }
+  ];
 
-  render() {
-    return (
-      <section className="s4">
-        <Container>
-          <div className="s4__titles">
-            <h1>app gallery</h1>
-            <h4>Integer Cursus Bibendum Augue Ac Cursus .</h4>
-          </div>
-          <div class="owl-carousel owl-theme">
-            <div>
-              <img
-                src="https://bootstrapmade.com/demo/themes/eStartup/img/screen/1.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://bootstrapmade.com/demo/themes/eStartup/img/screen/2.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://bootstrapmade.com/demo/themes/eStartup/img/screen/3.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://bootstrapmade.com/demo/themes/eStartup/img/screen/4.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://bootstrapmade.com/demo/themes/eStartup/img/screen/5.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://bootstrapmade.com/demo/themes/eStartup/img/screen/6.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://bootstrapmade.com/demo/themes/eStartup/img/screen/7.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://bootstrapmade.com/demo/themes/eStartup/img/screen/8.jpg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://bootstrapmade.com/demo/themes/eStartup/img/screen/9.jpg"
-                alt=""
-              />
-            </div>
-          </div>
-        </Container>
-
-        <style>
-          {`
-           .s4 {
-               font-size: 16px;
-               margin-top: 10em;
-           }
-           .s4__titles {
-               margin-bottom: 4em;
-               text-align: center;
-           }
-           .s4__titles h1 {
-               font-size: 3em;
-               font-weight: 100;
-               text-transform: capitalize;
-               letter-spacing: 5px;
-           }
-           .s4__titles h4 {
-               font-size: .9em;
-               font-weight: 100;
-               margin-top: 2em;
-               color: #949090;
-           }
-            .owl-dots .owl-dot {
-                outline: none;
-            }
-            .owl-dots .owl-dot.active span, .owl-dots .owl-dot:hover span {
-                background: hsl(108, 47%, 57%) !important;
-            }
-            
-            `}
-        </style>
-      </section>
-    )
+  const captionStyle = {
+    fontSize: '2em',
+    fontWeight: 'bold',
   }
+  const slideNumberStyle = {
+    fontSize: '20px',
+    fontWeight: 'bold',
+  }
+  return (
+    <div className="App" style={{marginTop:100,marginBottom:100}}>
+      <div style={{ textAlign: "center" }}>
+        <h2><strong>Here are some of insights of Yuvarang2019</strong></h2>
+   
+        <div style={{
+          padding: "0 20px"
+        }}>
+          <Carousel
+            data={data}
+            time={2000}
+            width="100em"
+            height="600px"
+            captionStyle={captionStyle}
+            radius="30px"
+            slideNumberStyle={slideNumberStyle}
+            captionPosition="bottom"
+            automatic={true}
+            dots={true}
+            pauseIconColor="white"
+            pauseIconSize="40px"
+            slideImageFit="cover"
+            // thumbnails={true}
+            // thumbnailWidth="100px"
+            style={{
+              textAlign: "center",
+              maxWidth: "100em",
+              maxHeight: "600px",
+              margin: "40px auto",
+            }}
+          />
+        </div>
+      </div>
+    </div>
+  );
 }
+
+export default Carousel1;
