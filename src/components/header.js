@@ -6,151 +6,168 @@ const Header = () => {
   
   return (
     <header>
-      <div className="intro-logo jumbo-bg" >
-        <video autoPlay loop playsInline muted className="back-video" >
-          <source src='video.mp4' type='video/mp4' />
-        </video>
-        <h1 id='title'>युवारंग 2023</h1>
+      
+      <div class="header">
+
+      <div class="info">
+      <h4><a href="#category">UI DESIGN</a></h4>
+        <h1>युवारंग 2023</h1>
         <h3 id="subtitle" style={{marginTop:17,fontSize:24}}>Enjoy the youth full of colours</h3>
+
         <div className="intro-button">
           <a href="" style={{fontSize:20}}>Register</a>
         </div>
-        {/* <div className="company-icons">
-          <span className="company-icons__item">
-            <i className="fab fa-apple" />
-            app store
-          </span>
-          <span className="company-icons__item">
-            <i className="fab fa-google-play" />
-            google play
-          </span>
-          <span className="company-icons__item">
-            <i className="fab fa-windows" />
-            windows
-          </span>
-        </div> */}
       </div>
+      </div>
+      <section class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nisl turpis, porttitor et finibus id, viverra a metus. Praesent non ante sed orci posuere varius quis sit amet dui. Cras molestie magna orci, id gravida dolor molestie in. Duis sollicitudin turpis quis tortor egestas, ut ultrices nisl elementum. Vestibulum sed ipsum eget nulla laoreet cursus in ac sem. Integer a suscipit justo, quis aliquam sapien. Maecenas et tellus nibh. Vivamus tincidunt eros id commodo pellentesque.</p>
+      </section>
 
       <style jsx>{`
-        header {
-          margin-bottom: 1rem;
-          height: 100vh;
-        }
-        .back-video{
-          position:absolute;
-          left:0;
-          bottom:0;
-          z-index:-1;
+       
+        @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i');
+html,body{
+  margin:0;
+  height:120%;
+  font-family: 'Josefin Sans', sans-serif;
 
-        }
-        @media (min-aspect-ratio:16/9){
-          .back-video{
-            width:100%;
-            height:auto;
-          }
-        }
-        @media (max-aspect-ratio:16/9){
-          .back-video{
-           width:auto;
-           height:100%;
-           margin-top:10em;
-          }
-        @media (max-width:600px){
-          .back-video{
-            display:none;
-           }
-          #title{
-            background: -webkit-linear-gradient(${color}, #333);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          }
-          #subtitle {
-            color:gray;
-          }
-          .intro-logo h1 {
-            font-size: 4em;
-            margin-top:0.8em
-          }
-        }
-      }
-        #title{
-          // background: -webkit-linear-gradient(${color}, #333);
-          // -webkit-background-clip: text;
-          // -webkit-text-fill-color: transparent;
-          color:white;
-          margin-top:1.5em
-        }
-        .intro-logo {
-          display: flex;
-          position: absolute;
-          top: 5em;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-        }
+}
+a{
+  text-decoration:none
+}
+.header{
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  height:50vw;
+  min-height:400px;
+  max-height:550px;
+  min-width:300px;
+  color:#eee;
+}
+.header:after{
+  content:"";
+  width:100%;
+  height:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  z-index:-1;
+ background: linear-gradient(to bottom, rgba(0,0,0,0.12) 40%,rgba(27,32,48,1) 100%);
+}
+.header:before{
+  content:"";
+  width:100%;
+  height:200%;
+  position:absolute;
+  top:0;
+  left:0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0); backface-visibility: hidden;
+  scale(1.0, 1.0);
+    transform: translateZ(0);
+  background:#1B2030 url(https://images.unsplash.com/photo-1571993142257-eae0b44cf0f1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ) 50% 0 no-repeat;
+  background-size:100%;
+  background-attachment:fixed;
+  animation: grow 360s  linear 10ms infinite;
+  transition:all 0.4s ease-in-out;
+  z-index:-2
+}
+.header a{
+  color:#eee
+}
+@media (min-width: 1024px) {
+  h1 {
+    font-size:10em;
+  }
+}
+.menu{
+  display:block;
+  width:40px;
+  height:30px;
+  border:2px solid #fff;
+  border-radius:3px;
+  position:absolute;
+  right:20px;
+  top:20px;
+  text-decoration:none
+}
+.menu:after{
+  content:"";
+  display:block;
+  width:20px;
+  height:3px;
+  background:#fff;
+  position:absolute;
+  margin:0 auto;
+  top:5px;
+  left:0;
+  right:0;
+  box-shadow:0 8px, 0 16px
+}
+.logo{
+  border:2px solid #fff;
+  border-radius:3px;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  align-content:center;
+  margin:20px;
+  padding:0px 10px;
+  font-weight:900;
+  font-size:1.1em;
+  line-height:1;
+  box-sizing:border-box;
+  height:40px
+}
+.sides, .info{
+  flex: 0 0 auto;
+  width:50%
+}
+.info{
+  width:100%;
+  padding:15% 10% 0 10%;
+  text-align:center;
+  text-shadow:0 2px 3px rgba(0,0,0,0.2)
+}
+.author{
+  display:inline-block;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:url(https://i.imgur.com/6DLCsZcb.jpg) center no-repeat;
+  background-size:cover;
+  box-shadow:0 2px 3px rgba(0,0,0,0.3);
+  margin-bottom:3px
+}
+.info h4, .meta{
+  font-size:0.7em
+}
+.meta{
+  font-style:italic;
+}
+@keyframes grow{
+  0% { transform: scale(1) translateY(0px)}
+  50% { transform: scale(1.2) translateY(-400px)}
+}
+.content{  
+  padding:5% 10%;
+  text-align:justify
+}
+.btn{
+  color:#333;
+  border:2px solid;
+  border-radius:3px;
+  text-decoration:none;
+  display:inline-block;
+  padding:5px 10px;
+  font-weight:600
+}
 
-        .intro-logo h1 {
-          font-size: 8em;
-          font-weight: 900;
-          font-family: 'Philosopher', sans-serif;
-          color: white;
-        }
-        .intro-logo h3 {
-          font-size: 1rem;
-          font-weight: 300;
-          color: white;
-          margin-bottom: 3em;
-        }
-
-        .intro-logo img {
-          max-width: 95%;
-          height: auto;
-        }
-        .company-icons__item + .company-icons__item {
-          margin-left: 1rem;
-        }
-        @media (min-width: 575px) {
-          .company-icons__item + .company-icons__item {
-            margin-left: 2rem;
-          }
-        }
-        .company-icons__item i {
-          margin-right: 5px;
-        }
-        .intro-button {
-          margin-top: 2.3em;
-          margin-bottom: 3em;
-        }
-        .intro-button a {
-          transition: box-shadow .3s;
-          padding: 0.65em 2.6em;
-          border-radius: 30px;
-          color: ${color};
-          border: 1.8px solid ${color};
-          background: white;
-          transition: all 0.5s;
-        }
-        .intro-button a:hover {
-          box-shadow: 0 0 11px ${color}; 
-          background-color: ${color};
-          color: white;
-          box-shadow:2px;
-        }
-
-        .company-icons {
-          color: var(--gray-color-2);
-          font-size: 0.95em;
-        }
-        .company-icons__item {
-          transition: all 0.5s;
-        }
-        .company-icons__item:hover {
-          color: var(--brand-color);
-          cursor: pointer;
-        }
       `}</style>
     </header>
   )
