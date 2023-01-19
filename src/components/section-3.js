@@ -5,7 +5,7 @@ export default () => (
   <section className="s3">
     <Container>
       <div className="s3__titles">
-        <h1> Amazing Features.</h1>
+        <h1> Sponsors</h1>
         <h4>Integer Cursus Bibendum Augue Ac Cursus .</h4>
       </div>
       <Row className="s3__box-wrapper">
@@ -53,7 +53,7 @@ export default () => (
             industry
           </p>
         </Col>
-        <Col md="6" lg="3" className="s3__box-item">
+        {/* <Col md="6" lg="3" className="s3__box-item">
           <img
             src="https://bootstrapmade.com/demo/themes/eStartup/img/svg/asteroid.svg"
             alt=""
@@ -96,7 +96,7 @@ export default () => (
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry
           </p>
-        </Col>
+        </Col> */}
       </Row>
     </Container>
     <style>{`
