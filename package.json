@@ -6,7 +6,9 @@
   "main": "src/index.js",
   "dependencies": {
     "react": "^18.1.0",
+    "react-carousel-minimal": "^1.4.1",
     "react-dom": "^18.1.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-scripts": "2.0.3",
     "reactstrap": "6.5.0",
     "styled-jsx": "3.1.2"

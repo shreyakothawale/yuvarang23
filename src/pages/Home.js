@@ -1,12 +1,11 @@
 import React from 'react'
 import Header from '../components/header'
 import Nav from '../components/nav'
+import Carousel1 from '../components/carousel'
 import Sec1 from '../components/section-1'
-import Sec2 from '../components/section-2'
 import Sec3 from '../components/section-3'
-// import Carousel from './components/carousel'
-import Sec5 from '../components/section-5'
-import Sec6 from '../components/section-6'
+import Footer from '../components/footer'
+
 
 const Home = () => {
   return (
@@ -14,10 +13,9 @@ const Home = () => {
          <Nav />
       <Header />
       <Sec1 />
-      <Sec2 />
+      <Carousel1/>
       <Sec3 />
-      <Sec5 />
-      <Sec6 />
+      <Footer/>
       <style jsx global>{`
         .app-wrapper {
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
